@@ -1,0 +1,439 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Add fallback font families for 'Avenir Next' */
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Avenir Next", Arial, sans-serif;
+  /* background-color: #3b4c6d1b; */
+  background-color: rgba(255, 145, 0, 0.4);
+  background-image: url("bg8.png");
+  /* background: linear-gradient(to bottom, rgba(242, 79, 30, 0.5), rgba(255, 255, 0, 0.5)); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover; /* Options: contain, cover, auto, or specific size (e.g., 100% 100%) */
+  background-position: center; /* Options: left top, left center, left bottom, center top, center center, center bottom, right top, right center, right bottom, or specific position (e.g., 50% 50%) */
+  background-repeat: no-repeat;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  width: 1274px;
+  /* border: solid;
+    border-width: 4px;
+    border-color: black; */
+  /* background-color: aqua; */
+}
+.weeks-list {
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+.week {
+  /* width: 400px;
+    height: 400px; */
+  /* text-align: center; */
+  /* border: solid;
+    border-width: 4px;
+    border-color: black; */
+  /* background-color: red; */
+  width: 327px;
+  height: 603px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.week p {
+  color: #3b4c6d;
+  font-family: sans-serif;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: rgb(242, 171, 29);
+  padding: 20px;
+  width: fit-content;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.week p:hover{
+    transform: scale(1.2);
+}
+.details {
+  /* width: 400px;
+    height: 400px; */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  /* border: solid;
+    border-width: 4px;
+    border-color: black; */
+  /* background-color: yellow; */
+
+  width: 917px;
+  height: 603px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: #fff;
+}
+.details .question-container{
+    justify-content: flex-start;
+    background-color: rgb(242, 171, 29);
+    width: fit-content;
+    height: fit-content;
+    padding: 50px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.details .question-container:hover{
+    transform: scale(1.2);
+}
+button{
+    transition: transform 0.3s ease;
+}
+button:hover{
+    transform: scale(1.2);
+}
+.details .question-container strong{
+    font-size: 30px;
+}
+.details .sub-question {
+    font-weight: 600;
+}
+
+.allWeek-addToWeek-container {
+  width: 1274px;
+  height: 82px;
+  flex-shrink: 0;
+  margin-bottom: 30px;
+
+  /* border: solid;
+    border-width: 4px 4px 4px 4px;
+    border-color: black; */
+  /* border: solid;
+    border-width: 4px 4px 0 4px;
+    border-color: black;
+background-color: blueviolet; */
+  border-radius: 30px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.second-top-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1194px;
+  height: 42px;
+  flex-shrink: 0;
+  /* position: relative; */
+}
+.week-num .colorOnNotClick {
+  border-radius: 16px;
+  border: none;
+  background: #f7f9fb;
+  width: 89px;
+  height: 42px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.week-num .colorOnNotClick p {
+  color: #3b4c6d;
+  font-family: "Avenir Next";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.colorOnClick {
+  border: none;
+  border-radius: 16px;
+  background: #3b4c6d;
+  width: 89px;
+  height: 42px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.colorOnClick p {
+  color: var(--neutral-basic-white, #fff);
+  font-family: "Avenir Next";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.icon-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  /* border-radius: 5px; */
+  border: none;
+  background-color: #fff;
+}
+.icon-text p {
+  color: #3b4c6d;
+  font-family: "Avenir Next";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.add-new-week-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  margin-right: 5px;
+}
+
+.drop-down {
+  position: absolute;
+  top: 85px;
+  right: 0;
+}
+.add-new-week-in-dropped {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 200px;
+}
+.add-new-week-in-dropped p {
+  color: #f24e1e;
+  font-family: "Avenir Next";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.hr1 {
+  margin: 10px 0 5px 0;
+  width: 178px;
+  height: 0.5px;
+  background: rgba(0, 0, 0, 0.1);
+}
+.hr2 {
+  width: 192px;
+  height: 0.5px;
+  background: rgba(0, 0, 0, 0.1);
+  margin: 15px 0 15px 0;
+}
+.active {
+  display: none;
+}
+.dropDown-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 200px;
+  height: 120px;
+}
+.order-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.Week-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.text-drop-icon {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* font-size: 20px; */
+  cursor: pointer;
+
+  width: 81px;
+  height: 36px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: #f7f9fb;
+}
+.text-drop-icon p {
+  width: 39px;
+  color: var(--neutral-grey-medium, #a1a1a1);
+  font-family: "Avenir Next";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.dropdown-orders {
+  cursor: pointer;
+  width: 81px;
+  height: 76px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: var(--dropdowns-contrast-beige, #fdfdfd);
+  position: absolute;
+  top: 40px;
+  box-shadow: 2px -1px 60px 5px rgba(0, 0, 0, 0.09);
+}
+.droplist-div {
+  width: 77px;
+  height: 38px;
+  flex-shrink: 0;
+  fill: #f7f9fb;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.droplist-div p {
+  color: #1e1e1e;
+  font-family: "Avenir Next";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-align: center;
+  width: 36px;
+}
+.dropdown-weeks {
+  /* Existing styles */
+  overflow-y: scroll;
+  width: 81px;
+  height: 106px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: var(--dropdowns-contrast-beige, #fdfdfd);
+  position: absolute;
+  top: 40px;
+  box-shadow: 2px -1px 60px 5px rgba(0, 0, 0, 0.09);
+}
+
+/* Styles for the width of the scrollbar */
+/* For WebKit-based browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 2px; /* Width of the scrollbar */
+}
+
+/* Styles for the scrollbar track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background color of the scrollbar track */
+}
+
+/* Styles for the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background: #a1a1a1; /* Background color of the scrollbar thumb */
+}
+
+.dropdown-weeks p {
+  width: 36px;
+  color: #1e1e1e;
+  font-family: "Avenir Next";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.dropdown-weeks div:hover {
+  background-color: grey;
+}
+.dropdown-orders div:hover {
+  background-color: grey;
+}
+.order-week-text {
+  /* font-size: 12px;
+    width: 200px; */
+
+  width: 191px;
+  color: var(--neutral-basic-back, #303030);
+  font-family: "Avenir Next";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.order-week {
+  color: #a1a1a1;
+  font-family: "Avenir Next";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  width: 200px;
+}
+.btn1 {
+  cursor: pointer;
+  width: 41px;
+  color: #3b4c6d;
+  font-family: "Avenir Next";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border: none;
+  background: none;
+}
+.btn2 {
+  cursor: pointer;
+  width: 82px;
+  height: 25px;
+  flex-shrink: 0;
+  border-radius: 3px;
+  background: #3b4c6d;
+}
+.btn2 p {
+  color: #fff;
+  font-family: "Avenir Next";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+/* .big-dropDown-container {
+    width: 222px;
+height: 167px;
+flex-shrink: 0;
+} */
+.main-dropdown {
+  background: #fff;
+  box-shadow: 2px -1px 60px 5px rgba(0, 0, 0, 0.04);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  width: 222px;
+  height: 200px;
+  flex-shrink: 0;
+  padding: 15px 0 15px 0;
+}
+ul {
+  list-style: none;
+}
