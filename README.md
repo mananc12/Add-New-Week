@@ -15,13 +15,9 @@ Welcome to Homework Organizer project! This web application allows users to mana
 ## Getting Started
 
 1. Clone the repository:
-
-```bash
-git clone https://github.com/your-username/homework-organizer.git
-```
-2. Open index.html in your web browser.
-
-3. Click on the "Add a Week" button to see the feature in action.
+2. Run npm command 'npm i' for frontend folder.
+3. Run npm command 'npm start' for frontend folder and 'nodemon app.js' for backend folder.
+4. Click on the "Add a Week" button to see the feature in action.
 
 ## Contributing
 Contributions are welcome! If you'd like to enhance the project or fix any issues, feel free to submit a pull request.
