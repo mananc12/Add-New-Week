@@ -17,7 +17,7 @@ Welcome to Homework Organizer project! This web application allows users to mana
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/anshs-homework-organizer.git
+git clone https://github.com/your-username/homework-organizer.git
 ```
 2. Open index.html in your web browser.
 
